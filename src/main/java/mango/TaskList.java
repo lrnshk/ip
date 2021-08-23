@@ -80,6 +80,7 @@ public class TaskList {
         }
 
         list.add(listIndex, newTask);
+
         String word;
         if (listIndex == 0) {
             word = "task";

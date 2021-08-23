@@ -5,9 +5,11 @@ import mango.task.*;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -34,6 +36,7 @@ public class Storage {
     public ArrayList<Task> load() throws IOException {
         ArrayList<Task> list = new ArrayList<>();
         File f = new File(this.filePath);
+
         if (!f.exists()) {
             File directory = new File(f.getParent());
             if (!directory.exists()) {
@@ -76,6 +79,7 @@ public class Storage {
         String tempFilePath = "temp/mango.txt";
         File f = new File(tempFilePath);
         File directory = new File(f.getParent());
+
         if (!directory.exists()) {
             directory.mkdirs();
         }
