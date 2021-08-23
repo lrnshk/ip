@@ -134,6 +134,23 @@ public class TaskList {
     }
 
     /**
+     * Searches in the task list for tasks that contain the string given.
+     * @param str The string to find.
+     */
+    public void find(String str) {
+        int i = 0;
+        System.out.println("Here are the matching tasks in your list:");
+        while (i < listIndex) {
+            int num = i+1;
+            Task curr = list.get(i);
+            if (curr.getDescription().contains(str)) {
+                System.out.printf("%d. [%s][%s] %s\n", num, curr.getType(), curr.getStatusIcon(), curr.getDescription());
+            }
+            i++;
+        }
+    }
+
+    /**
      * Prints the current task list.
      */
     public void printList() {
